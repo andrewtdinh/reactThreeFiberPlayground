@@ -6,7 +6,10 @@ import './style.css'
 export default () => (
   <Canvas>
     <mesh>
-      <boxBufferGeometry />
+      <boxBufferGeometry 
+        attach="geometry"
+        args={[1, 1, 1]}
+      />
     </mesh>
   </Canvas>
 )
