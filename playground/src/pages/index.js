@@ -10,6 +10,10 @@ export default () => (
         attach="geometry"
         args={[1, 1, 1]}
       />
+      <meshBasicMaterial
+        attach="material"
+        color="red"
+      />
     </mesh>
   </Canvas>
 )
