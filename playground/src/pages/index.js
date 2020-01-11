@@ -1,4 +1,12 @@
 import React from "react"
+import { Canvas } from 'react-three-fiber'
+
 import './style.css'
 
-export default () => <div>Hello world!</div>
+export default () => (
+  <Canvas>
+    <mesh>
+      <boxBufferGeometry />
+    </mesh>
+  </Canvas>
+)
