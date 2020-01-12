@@ -12,6 +12,7 @@ const Box = () => {
       onPointerOver={() => setHovered(true)} 
       onPointerOut={() => setHovered(false)}
       onClick={() => setActive(!active)}
+      scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
     >
       <boxBufferGeometry
         attach="geometry"
