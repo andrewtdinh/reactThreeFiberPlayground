@@ -3,10 +3,10 @@ import { Canvas } from 'react-three-fiber'
 
 import './style.css'
 
-export default () => (
-  <Canvas>
+const Box = () => {
+  return (
     <mesh>
-      <boxBufferGeometry 
+      <boxBufferGeometry
         attach="geometry"
         args={[1, 1, 1]}
       />
@@ -15,5 +15,11 @@ export default () => (
         color="red"
       />
     </mesh>
+  )
+}
+
+export default () => (
+  <Canvas>
+    <Box />
   </Canvas>
 )
