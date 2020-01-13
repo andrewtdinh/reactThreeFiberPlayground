@@ -1,10 +1,11 @@
-import React, { useState } from "react"
-import { Canvas } from 'react-three-fiber'
+import React, { useState, useRef } from "react"
+import { Canvas, useRender } from 'react-three-fiber'
 import { useSpring, a } from 'react-spring/three'
 
 import './style.css'
 
 const Box = () => {
+  const meshRef = useRef()
   const [ hovered, setHovered ] = useState(false);
   const [ active, setActive ] = useState(false);
   const props = useSpring({
@@ -12,8 +13,13 @@ const Box = () => {
     color: hovered ? "hotpink" : "gray"
   })
 
+  useRender(() => {
+    
+  })
+
   return (
     <a.mesh 
+      ref={meshRef}
       onPointerOver={() => setHovered(true)} 
       onPointerOut={() => setHovered(false)}
       onClick={() => setActive(!active)}
