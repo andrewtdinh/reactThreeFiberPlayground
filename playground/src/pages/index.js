@@ -34,7 +34,7 @@ const Plane = () => (
     />
     <meshPhysicalMaterial
       attach="material"
-      color="red"
+      color="blue"
     />
   </mesh>
 )
