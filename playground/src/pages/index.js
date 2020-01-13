@@ -13,7 +13,7 @@ const Box = () => {
   })
 
   return (
-    <mesh 
+    <a.mesh 
       onPointerOver={() => setHovered(true)} 
       onPointerOut={() => setHovered(false)}
       onClick={() => setActive(!active)}
@@ -23,11 +23,11 @@ const Box = () => {
         attach="geometry"
         args={[1, 1, 1]}
       />
-      <meshBasicMaterial
+      <a.meshBasicMaterial
         attach="material"
         color={props.color}
       />
-    </mesh>
+    </a.mesh>
   )
 }
 
