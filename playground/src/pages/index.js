@@ -27,7 +27,7 @@ const Controls = () => {
 }
 
 const Plane = () => (
-  <mesh rotation={[-Math.PI / 2, 0, 0]}>
+  <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
     <planeBufferGeometry
       attach="geometry"
       args={[100, 100]}
@@ -69,7 +69,8 @@ const Box = () => {
 }
 
 export default () => (
-  <Canvas>
+  <Canvas camera={{position: [0, 0, 5]}}>
+    <fog attach="fog" args={["white", 5, 15]} />
     <Controls />
     <Box />
     <Plane />
