@@ -26,6 +26,19 @@ const Controls = () => {
   )
 }
 
+const Plane = () => (
+  <mesh>
+    <planeBufferGeometry
+      attach="geometry"
+      args={[100, 100]}
+    />
+    <meshPhysicalMaterial
+      attach="material"
+      color="red"
+    />
+  </mesh>
+)
+
 const Box = () => {
   const [ hovered, setHovered ] = useState(false);
   const [ active, setActive ] = useState(false);
@@ -59,5 +72,6 @@ export default () => (
   <Canvas>
     <Controls />
     <Box />
+    <Plane />
   </Canvas>
 )
