@@ -14,7 +14,7 @@ const Box = () => {
   })
 
   useRender(() => {
-    meshRef.current.rotation.y += 0.01
+    meshRef.current.rotation.y += 0.01;
   })
 
   return (
