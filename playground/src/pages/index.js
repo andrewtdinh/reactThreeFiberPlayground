@@ -27,7 +27,7 @@ const Controls = () => {
 }
 
 const Plane = () => (
-  <mesh>
+  <mesh rotation={[-Math.PI / 2, 0, 0]}>
     <planeBufferGeometry
       attach="geometry"
       args={[100, 100]}
@@ -55,7 +55,7 @@ const Box = () => {
       scale={props.scale}
     >
       <ambientLight />
-      <spotLight position={[0, 5, 10]} /> 
+      <spotLight position={[0, 5, 10]} penumbra={1} /> 
       <boxBufferGeometry
         attach="geometry"
         args={[1, 1, 1]}
