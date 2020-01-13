@@ -41,11 +41,12 @@ const Box = () => {
       onClick={() => setActive(!active)}
       scale={props.scale}
     >
+      <ambientLight />
       <boxBufferGeometry
         attach="geometry"
         args={[1, 1, 1]}
       />
-      <a.meshBasicMaterial
+      <a.meshPhysicalMaterial
         attach="material"
         color={props.color}
       />
