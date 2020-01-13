@@ -1,8 +1,27 @@
-import React, { useState } from "react"
-import { Canvas } from 'react-three-fiber'
+import React, { useState, useRef } from "react"
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { Canvas, extend, useThree, useRender } from 'react-three-fiber'
 import { useSpring, a } from 'react-spring/three'
 
 import './style.css'
+
+extend({ OrbitControls });
+
+const Controls = () => {
+  const orbitRef = useRef();
+  const { camera, gl } = useThree();
+
+  useRender(() => {
+    orbitRef.current.update();
+  })
+
+  return (
+    <orbitControls 
+      ref={orbitRef}
+      args={[camera, gl.domElement]}
+    />
+  )
+}
 
 const Box = () => {
   const [ hovered, setHovered ] = useState(false);
@@ -33,6 +52,7 @@ const Box = () => {
 
 export default () => (
   <Canvas>
+    <Controls />
     <Box />
   </Canvas>
 )
