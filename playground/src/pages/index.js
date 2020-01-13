@@ -5,7 +5,7 @@ import { useSpring, a } from 'react-spring/three'
 import './style.css'
 
 const Box = () => {
-  const meshRef = useRef()
+  const meshRef = useRef();
   const [ hovered, setHovered ] = useState(false);
   const [ active, setActive ] = useState(false);
   const props = useSpring({
@@ -14,7 +14,7 @@ const Box = () => {
   })
 
   useRender(() => {
-    
+    meshRef.current.rotation.y += 0.01
   })
 
   return (
