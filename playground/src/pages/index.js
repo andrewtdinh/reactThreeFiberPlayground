@@ -14,7 +14,7 @@ const SpaceShip = () => {
   useEffect(() => {
     new GLTFLoader().load('/scene.gltf', setModel);
   })
-
+  console.log({model})
   return model ? <primitive object={model.scene} /> : null;
 }
 
