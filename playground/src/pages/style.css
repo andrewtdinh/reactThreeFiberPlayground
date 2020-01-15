@@ -8,3 +8,13 @@ canvas {
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  font-weight: 800;
+  font-size: 20em;
+  text-align: center;
+  color: hotpink;
+  position: absolute;
+  top: 0;
+  
+}
