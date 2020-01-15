@@ -14,7 +14,7 @@ const SpaceShip = () => {
   useEffect(() => {
     new GLTFLoader().load('/scene.gltf', setModel);
   })
-  
+
   return model ? <primitive object={model.scene} /> : null;
 }
 
@@ -88,7 +88,7 @@ export default () => (
     <fog attach="fog" args={["white", 5, 15]} />
     <Controls />
     <Box />
-    <Plane />
+    {/* <Plane /> */}
     <SpaceShip />
   </Canvas>
 )
