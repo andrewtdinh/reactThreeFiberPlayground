@@ -82,6 +82,7 @@ const Box = () => {
 
 export default () => (
   <>
+    <h1>Andrew Dinh</h1>
     <Canvas camera={{position: [0, 0, 5]}} onCreated={({ gl }) => {
       gl.shadowMap.enabled = true;
       gl.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -94,6 +95,5 @@ export default () => (
       {/* <Plane /> */}
       <SpaceShip />
     </Canvas>
-    <h1>Andrew Dinh</h1>
   </>
 )
