@@ -85,9 +85,9 @@ export default () => (
     gl.shadowMap.enabled = true;
     gl.shadowMap.type = THREE.PCFSoftShadowMap;
   }}>
-    <ambientLight />
+    <ambientLight intensity={0.5} />
     <spotLight position={[15, 20, 5]} penumbra={1} castShadow /> 
-    <fog attach="fog" args={["white", 10, 25]} />
+    <fog attach="fog" args={["black", 10, 25]} />
     <Controls />
     {/* <Box /> */}
     {/* <Plane /> */}
